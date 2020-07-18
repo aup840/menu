@@ -17,29 +17,19 @@ Route::get('/becas', function () {
     return view('page.becas');
 });
 
-Route::get('/contacto', function () {
-    return view('page.contacto');
-});
 
-Route::get('/contact-US', function () {
-    return view('page.contact-US');
-});
+// Render in view
+Route::get('/contact', ['uses' => 'ContactUsFormController@createForm']);
 
-Route::post('/contacto', function(Request $request) {	
-	\Mail::send(new ContactMail($request));
-	return redirect('/');
-});
+// Post form data
+Route::post('/contact', [
+    'uses' => 'ContactUsFormController@ContactUsForm',
+    'as' => 'contact.store'
+]);
 
 Route::get('/investigacion', function () {
     return view('page.investigacion');
 });
-
-Route::get('/sendemail', 'SendEmailController@index');
-Route::post('/sendemail/send', 'SendEmailController@send');
-
-
-Route::get('contact-us', 'ContactUSController@contactUS');
-Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
 
 Route::group(['prefix'=>'proyectos'], function(){
 	Route::get('/dpage1', function(){

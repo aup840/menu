@@ -1,8 +1,9 @@
 @extends('master.layout')
 @section('content')
-	<h3>Contacto</h3>
+	<h1>Contact us</h1>
 	
 	  <div class="container mt-5">
+
         <!-- Success message -->
         @if(Session::has('success'))
             <div class="alert alert-success">
@@ -39,7 +40,7 @@
 
     <div class="form-group">
         <label>Telefono</label>
-        <input type="text" class="form-control {{ $errors->has('phone') ? 'error' : '' }}" name="phone" id="phone" placeholder="Escribe tu telefono a 10 digitos" required value="">
+        <input type="text" class="form-control {{ $errors->has('phone') ? 'error' : '' }}" name="phone" id="phone" placeholder="Escribe tu telefono a 10 digitos" required value="">>
 
         @if ($errors->has('phone'))
         <div class="error">
@@ -49,8 +50,8 @@
     </div>
 
     <div class="form-group">
-        <label>Asunto</label>
-        <input type="text" class="form-control {{ $errors->has('subject') ? 'error' : '' }}" name="subject" placeholder="Asunto...." required value=""
+        <label>Subject</label>
+        <input type="text" class="form-control {{ $errors->has('subject') ? 'error' : '' }}" name="subject placeholder="Asunto...." required value="">
             id="subject">
 
         @if ($errors->has('subject'))
@@ -63,7 +64,7 @@
     <div class="form-group">
         <label>Message</label>
         <textarea class="form-control {{ $errors->has('message') ? 'error' : '' }}" name="message" id="message" 
-            rows="3" placeholder="Escribe tu mensaje" required minlength="10"> </textarea>
+            rows="4" placeholder="Escribe tu mensaje" required minlength="10"> </textarea>
 
         @if ($errors->has('message'))
         <div class="error">

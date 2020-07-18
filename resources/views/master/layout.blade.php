@@ -78,7 +78,7 @@
                   @endif
                   @endauth
               @endif
-              <a class="dropdown-item" href="{{ url('contacto') }}">Contacto</a>
+              <a class="dropdown-item" href="{{ url('contact') }}">Contacto</a>
 
             </div>
           </li>
