@@ -1,0 +1,8 @@
+MAIL_DRIVER=smtp
+MAIL_HOST=mail.uriartclean.com 
+MAIL_PORT=465
+MAIL_USERNAME= contacto@uriartclean.com
+MAIL_PASSWORD= uclean12@
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=contacto@uriartclean.com
+MAIL_FROM_NAME="${APP_NAME}"
